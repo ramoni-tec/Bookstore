@@ -1,9 +1,11 @@
 package fi.haagahelia.Bookstore.domain;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity
 public class Book {
 
 	@Id
@@ -12,9 +14,7 @@ public class Book {
 	private String title, author, publicationYear, isbn;
 	private double price;
 
-	public Book() {
-
-	}
+	
 
 	public Book(String title, String author, String publicationYear, String isbn, double price) {
 		super();
@@ -23,6 +23,10 @@ public class Book {
 		this.publicationYear = publicationYear;
 		this.isbn = isbn;
 		this.price = price;
+	}
+	
+	public Book() {
+
 	}
 
 	public long getId() {
