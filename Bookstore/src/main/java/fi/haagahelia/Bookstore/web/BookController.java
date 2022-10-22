@@ -36,7 +36,7 @@ public class BookController {
 		model.addAttribute("categories", categoryrepository.findAll());
 		return "addbook";
 	}
-
+		
 	// save new student
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	public String save(Book book) {
